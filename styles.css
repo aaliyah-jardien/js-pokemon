@@ -1,0 +1,20 @@
+* {
+  background: grey;
+}
+
+/* .heading {
+    font: "Arial";
+    text-color: white;
+} */
+
+.pokemon-info {
+  margin: 0;
+  padding: 0;
+  /*   background: red; */
+  margin-left: 40%;
+}
+
+pokemon-list-container {
+  display: column;
+  align-items: row;
+}
