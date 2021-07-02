@@ -47,7 +47,7 @@ function getPokemonInfo(url) {
       console.log(data);
       // Write data to pokemon information container
       document.querySelector(".pokemon-info").innerHTML = `
-    <img src="${data.sprites.front_default} ">
+    <img src="${data.sprites.other["official-artwork"].front_default} ">
     `;
       document.querySelector(".pokename").innerHTML = `
     ${data.name}
