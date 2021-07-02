@@ -30,13 +30,15 @@ function getPokemonList(url) {
       });
       // Add a next pokemon button
       container.innerHTML += `<br><br><button onclick="getPokemonList('${data.next}')">Next</button>`;
+      // previous button
+      container.innerHTML += `<br><br><button onclick="getPokemonList('${data.previous}')">Previous</button>`;
     });
 }
 
 // Get default pokemon list
 getPokemonList(base_URL);
 
-// Function to get information about a specific pokemin
+// Function to get information about a specific pokemon
 function getPokemonInfo(url) {
   fetch(url)
     .then((response) => response.json())
@@ -46,6 +48,18 @@ function getPokemonInfo(url) {
       // Write data to pokemon information container
       document.querySelector(".pokemon-info").innerHTML = `
     <img src="${data.sprites.front_default} ">
+    `;
+      document.querySelector(".pokename").innerHTML = `
+    ${data.name}
+    `;
+      document.querySelector(".pokeheight").innerHTML = `<p>Height:
+    ${data.height}</p>
+    `;
+      document.querySelector(".pokeweight").innerHTML = `<p>Weight:
+    ${data.weight}</p>
+    `;
+      document.querySelector(".pokeabilities").innerHTML = `<p>Abilities:
+    ${data.abilities[0].ability.name}</p>
     `;
     });
 }

@@ -12,9 +12,14 @@
   padding: 0;
   /*   background: red; */
   margin-left: 40%;
+  height: 50px;
 }
 
 pokemon-list-container {
   display: column;
   align-items: row;
+}
+
+img {
+  height: 200px;
 }
